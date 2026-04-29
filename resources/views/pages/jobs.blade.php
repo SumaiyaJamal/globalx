@@ -6,7 +6,9 @@
 @push('styles')
 <style>
     .jobs-hero {
-        background: var(--gradient-hero);
+        background:
+            linear-gradient(108deg, rgba(255,255,255,.92) 0%, rgba(236,245,253,.86) 56%, rgba(219,236,248,.72) 100%),
+            radial-gradient(circle at 84% 22%, rgba(2,43,99,.12) 0%, rgba(2,43,99,0) 52%);
         padding: 80px 0 70px;
         text-align: center;
         position: relative;
@@ -51,7 +53,7 @@
         padding: .25rem .6rem;
         border-radius: 999px;
         border: 1px solid var(--border);
-        background: rgba(10,92,138,.05);
+        background: rgba(6,130,181,.08);
         color: var(--primary-dark);
         font-size: .82rem;
         font-weight: 700;
@@ -70,8 +72,8 @@
     <section class="jobs-hero">
         <div class="container position-relative" style="z-index:2;">
             <span class="section-label">Jobs Portal</span>
-            <h1 style="color:#fff;letter-spacing:-1px;font-weight:800;">Open Opportunities</h1>
-            <p style="color:rgba(255,255,255,.78);max-width:560px;margin:0 auto;line-height:1.7;">
+            <h1 style="color:#022B63;letter-spacing:-1px;font-weight:800;">Open Opportunities</h1>
+            <p style="color:rgba(2,43,99,.76);max-width:560px;margin:0 auto;line-height:1.7;">
                 Browse active roles. To apply, use the <strong>Explore Opportunities</strong> form.
             </p>
         </div>

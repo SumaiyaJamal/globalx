@@ -7,7 +7,7 @@
     <div class="admin-card p-0 overflow-hidden">
         <div class="table-responsive">
             <table class="table table-hover align-middle mb-0">
-                <thead style="background:rgba(10,92,138,.06);">
+                <thead style="background:rgba(6,130,181,.10);">
                 <tr>
                     <th class="ps-3">Name</th>
                     <th>Email</th>

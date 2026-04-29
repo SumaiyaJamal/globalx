@@ -17,7 +17,7 @@
     <div class="admin-card p-0 overflow-hidden">
         <div class="table-responsive">
             <table class="table table-hover align-middle mb-0">
-                <thead style="background:rgba(10,92,138,.06);">
+                <thead style="background:rgba(6,130,181,.10);">
                 <tr>
                     <th class="ps-3">Title</th>
                     <th>Department</th>
@@ -45,10 +45,10 @@
                         </td>
                         <td class="text-end pe-3">
                             <div class="d-flex justify-content-end gap-2 flex-wrap">
-                                <a class="btn btn-sm btn-admin-outline" href="{{ route('admin.jobs.edit', $job) }}">
+                                <a class="btn btn-sm btn-admin-outline" href="{{ route('admin.jobs.edit', $job->id) }}">
                                     <i class="bi bi-pencil"></i> Edit
                                 </a>
-                                <form method="POST" action="{{ route('admin.jobs.destroy', $job) }}" onsubmit="return confirm('Delete this job?')">
+                                <form method="POST" action="{{ route('admin.jobs.destroy', $job->id) }}" onsubmit="return confirm('Delete this job?')">
                                     @csrf
                                     @method('DELETE')
                                     <button class="btn btn-sm btn-outline-danger" type="submit">

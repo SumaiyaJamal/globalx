@@ -11,7 +11,7 @@
         padding: .3rem .75rem;
         border-radius: 999px;
         border: 1px solid var(--border);
-        background: rgba(10,92,138,.05);
+        background: rgba(6,130,181,.08);
         color: var(--primary-dark);
         font-size: .85rem;
         font-weight: 700;

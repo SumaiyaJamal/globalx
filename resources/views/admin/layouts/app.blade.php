@@ -16,7 +16,7 @@
             --primary:       #0682B5;
             --primary-dark:  #022B63;
             --primary-light: #0682B5;
-            --accent:        #00c9a7;
+            --accent:        #0682B5;
             --text-dark:     #0d1b2a;
             --text-mid:      #3d5166;
             --text-light:    #7a91a8;
@@ -57,7 +57,7 @@
         .admin-brand .dot {
             width: 10px; height: 10px; border-radius: 50%;
             background: var(--accent);
-            box-shadow: 0 0 0 7px rgba(0,201,167,.14);
+            box-shadow: 0 0 0 7px rgba(6,130,181,.16);
         }
         .admin-brand-logo {
             height: 36px;
@@ -111,9 +111,9 @@
             box-shadow: var(--shadow-card);
         }
         .badge-admin {
-            background: rgba(0,201,167,.14);
-            color: #0b3a33;
-            border: 1px solid rgba(0,201,167,.25);
+            background: rgba(6,130,181,.14);
+            color: var(--primary-dark);
+            border: 1px solid rgba(6,130,181,.25);
             font-weight: 800;
         }
         .btn-admin {

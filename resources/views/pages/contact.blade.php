@@ -7,7 +7,9 @@
 <style>
 /* ── CONTACT HERO ── */
 .contact-hero {
-    background: var(--gradient-hero);
+    background:
+        linear-gradient(108deg, rgba(255,255,255,.92) 0%, rgba(236,245,253,.86) 56%, rgba(219,236,248,.72) 100%),
+        radial-gradient(circle at 84% 22%, rgba(2,43,99,.12) 0%, rgba(2,43,99,0) 52%);
     padding: 80px 0 70px;
     text-align: center;
     position: relative;
@@ -32,13 +34,13 @@
 .contact-hero h1 {
     font-size: clamp(2rem, 5vw, 3.2rem);
     font-weight: 800;
-    color: #fff;
+    color: #022B63;
     margin-bottom: 1rem;
     letter-spacing: -1px;
 }
 
 .contact-hero p {
-    color: rgba(255,255,255,.78);
+    color: rgba(2,43,99,.76);
     font-size: 1.05rem;
     max-width: 500px;
     margin: 0 auto;
@@ -115,7 +117,7 @@
 }
 
 .form-label-custom span {
-    color: #e53e3e;
+    color: var(--primary);
 }
 
 .form-control-custom {
@@ -128,7 +130,7 @@
 
 .form-control-custom:focus {
     border-color: var(--primary);
-    box-shadow: 0 0 0 3px rgba(10, 92, 138, 0.1);
+    box-shadow: 0 0 0 3px rgba(6, 130, 181, 0.12);
 }
 
 .form-control-custom::placeholder {
@@ -173,9 +175,9 @@
     opacity: .9;
 }
 
-.whatsapp-btn { background: #25D366; }
+.whatsapp-btn { background: #0682B5; }
 .email-btn { background: var(--primary); }
-.linkedin-btn { background: #0A66C2; }
+.linkedin-btn { background: #022B63; }
 
 /* ── FEATURES LIST ── */
 .feature-list {
@@ -271,7 +273,7 @@
             </div>
             <div class="col-md-4">
                 <div class="contact-info-card">
-                    <div class="icon-box flex-shrink-0" style="width:50px;height:50px;font-size:1.2rem;border-radius:12px;background:linear-gradient(135deg,#7c3aed,#5b21b6);">
+                    <div class="icon-box flex-shrink-0" style="width:50px;height:50px;font-size:1.2rem;border-radius:12px;background:linear-gradient(135deg,#0682B5,#022B63);">
                         <i class="bi bi-geo-alt-fill"></i>
                     </div>
                     <div>

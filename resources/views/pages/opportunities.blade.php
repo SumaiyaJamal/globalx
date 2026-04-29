@@ -7,7 +7,9 @@
 <style>
 /* ── OPPORTUNITIES HERO ── */
 .opportunities-hero {
-    background: var(--gradient-hero);
+    background:
+        linear-gradient(108deg, rgba(255,255,255,.92) 0%, rgba(236,245,253,.86) 56%, rgba(219,236,248,.72) 100%),
+        radial-gradient(circle at 84% 22%, rgba(2,43,99,.12) 0%, rgba(2,43,99,0) 52%);
     padding: 80px 0 70px;
     text-align: center;
     position: relative;
@@ -32,13 +34,13 @@
 .opportunities-hero h1 {
     font-size: clamp(2rem, 5vw, 3.2rem);
     font-weight: 800;
-    color: #fff;
+    color: #022B63;
     margin-bottom: 1rem;
     letter-spacing: -1px;
 }
 
 .opportunities-hero p {
-    color: rgba(255,255,255,.78);
+    color: rgba(2,43,99,.76);
     font-size: 1.05rem;
     max-width: 500px;
     margin: 0 auto;
@@ -74,7 +76,7 @@
 }
 
 .form-label-custom span {
-    color: #e53e3e;
+    color: var(--primary);
 }
 
 .form-control-custom {
@@ -87,7 +89,7 @@
 
 .form-control-custom:focus {
     border-color: var(--primary);
-    box-shadow: 0 0 0 3px rgba(10, 92, 138, 0.1);
+    box-shadow: 0 0 0 3px rgba(6, 130, 181, 0.12);
 }
 
 .form-control-custom::placeholder {
@@ -118,7 +120,7 @@
 
 .file-upload-label:hover {
     border-color: var(--primary);
-    background: rgba(10, 92, 138, 0.05);
+    background: rgba(6, 130, 181, 0.08);
 }
 
 .file-upload-label i {
@@ -171,22 +173,22 @@
     background: var(--primary-dark);
     color: #fff;
     transform: translateY(-2px);
-    box-shadow: 0 8px 28px rgba(10,92,138,.3);
+    box-shadow: 0 8px 28px rgba(2,43,99,.3);
 }
 
 .success-alert {
-    background: #d4edda;
-    color: #155724;
-    border: 1px solid #c3e6cb;
+    background: rgba(6,130,181,.08);
+    color: var(--primary-dark);
+    border: 1px solid rgba(6,130,181,.28);
     border-radius: var(--radius-sm);
     padding: 1rem;
     margin-bottom: 1.5rem;
 }
 
 .error-alert {
-    background: #f8d7da;
-    color: #721c24;
-    border: 1px solid #f5c6cb;
+    background: rgba(2,43,99,.06);
+    color: var(--primary-dark);
+    border: 1px solid rgba(2,43,99,.20);
     border-radius: var(--radius-sm);
     padding: 1rem;
     margin-bottom: 1.5rem;

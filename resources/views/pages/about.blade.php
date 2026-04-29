@@ -6,7 +6,9 @@
 <style>
 /* ── ABOUT HERO ── */
 .about-hero {
-    background: var(--gradient-hero);
+    background:
+        linear-gradient(108deg, rgba(255,255,255,.92) 0%, rgba(236,245,253,.86) 56%, rgba(219,236,248,.72) 100%),
+        radial-gradient(circle at 84% 22%, rgba(2,43,99,.12) 0%, rgba(2,43,99,0) 52%);
     padding: 100px 0 80px;
     position: relative;
     overflow: hidden;
@@ -34,24 +36,24 @@
     right: -100px;
     width: 400px;
     height: 400px;
-    background: radial-gradient(circle, rgba(0,201,167,.12) 0%, transparent 65%);
+    background: radial-gradient(circle, rgba(6,130,181,.12) 0%, transparent 65%);
     border-radius: 50%;
 }
 
 .about-hero h1 {
     font-size: clamp(2.2rem, 5vw, 3.4rem);
     font-weight: 800;
-    color: #fff;
+    color: #022B63;
     margin-bottom: 1.2rem;
     letter-spacing: -1px;
 }
 
 .about-hero h1 span {
-    color: var(--accent);
+    color: var(--primary);
 }
 
 .about-hero p {
-    color: rgba(255,255,255,.78);
+    color: rgba(2,43,99,.76);
     font-size: 1.1rem;
     max-width: 580px;
     margin: 0 auto;
@@ -117,7 +119,7 @@
 }
 
 .mv-card.vision .mv-icon {
-    background: rgba(10,92,138,.1);
+    background: rgba(6,130,181,.12);
     color: var(--primary);
 }
 
@@ -161,7 +163,7 @@
 .value-num {
     font-size: 2rem;
     font-weight: 800;
-    color: rgba(10,92,138,.1);
+    color: rgba(6,130,181,.14);
     line-height: 1;
     margin-bottom: .6rem;
 }
@@ -311,7 +313,7 @@
                     'icon' => 'bi-shield-check',
                     'title'=> 'Trust & Transparency',
                     'desc' => 'We prioritise honest communication, clear processes, and reliable partnerships with both clients and candidates.',
-                    'color'=> '#7c3aed',
+                    'color'=> 'var(--primary-dark)',
                 ],
                 [
                     'num'  => '04',

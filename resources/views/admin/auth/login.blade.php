@@ -14,7 +14,7 @@
             --primary:       #0682B5;
             --primary-dark:  #022B63;
             --primary-light: #0682B5;
-            --accent:        #00c9a7;
+            --accent:        #0682B5;
             --text-dark:     #0d1b2a;
             --text-mid:      #3d5166;
             --text-light:    #7a91a8;
@@ -74,7 +74,7 @@
             box-shadow: var(--shadow-card);
             padding: 1.5rem;
         }
-        .brand-dot { width:10px;height:10px;border-radius:50%;background:var(--accent); box-shadow: 0 0 0 7px rgba(0,201,167,.14); }
+        .brand-dot { width:10px;height:10px;border-radius:50%;background:var(--accent); box-shadow: 0 0 0 7px rgba(6,130,181,.16); }
         .brand-logo {
             height: 42px;
             width: auto;
@@ -93,7 +93,7 @@
         }
         .form-control:focus {
             border-color: var(--primary-light);
-            box-shadow: 0 0 0 3px rgba(20,136,198,.12);
+            box-shadow: 0 0 0 3px rgba(6,130,181,.12);
         }
         .btn-accent {
             background: var(--primary);
@@ -190,7 +190,7 @@
                 icon: 'error',
                 title: 'Login failed',
                 html: `{!! collect($errors->all())->map(fn($e) => '<div style="text-align:left;">- '.e($e).'</div>')->implode('') !!}`,
-                confirmButtonColor: '#0a5c8a'
+                confirmButtonColor: '#0682B5'
             });
         @endif
     </script>

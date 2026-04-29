@@ -27,7 +27,9 @@
 .hero-section .hero-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(105deg, rgba(7,63,97,.92) 0%, rgba(10,92,138,.80) 55%, rgba(20,136,198,.55) 100%);
+    background:
+        linear-gradient(108deg, rgba(255,255,255,.94) 0%, rgba(248,252,255,.90) 56%, rgba(240,248,255,.84) 100%),
+        radial-gradient(circle at 84% 22%, rgba(2,43,99,.08) 0%, rgba(2,43,99,0) 52%);
 }
 
 .hero-section .hero-content {
@@ -39,9 +41,9 @@
     display: inline-flex;
     align-items: center;
     gap: .5rem;
-    background: rgba(0,201,167,.15);
-    border: 1px solid rgba(0,201,167,.4);
-    color: var(--accent);
+    background: rgba(255,255,255,.78);
+    border: 1px solid rgba(2,43,99,.16);
+    color: var(--primary-dark);
     border-radius: 50px;
     padding: .45rem 1.2rem;
     font-size: .83rem;
@@ -53,19 +55,20 @@
 .hero-title {
     font-size: clamp(2.2rem, 5.5vw, 3.8rem);
     font-weight: 800;
-    color: #fff;
+    color: var(--primary-dark);
     line-height: 1.13;
     margin-bottom: 1.4rem;
     letter-spacing: -1px;
+    text-shadow: 0 2px 14px rgba(255,255,255,.45);
 }
 
 .hero-title .highlight {
-    color: var(--accent);
+    color: #0682B5;
 }
 
 .hero-subtitle {
     font-size: 1.12rem;
-    color: rgba(255,255,255,.82);
+    color: rgba(2,43,99,.82);
     line-height: 1.75;
     max-width: 520px;
     margin-bottom: 2.2rem;
@@ -77,7 +80,7 @@
     gap: 2rem;
     margin-top: 2.8rem;
     padding-top: 2rem;
-    border-top: 1px solid rgba(255,255,255,.15);
+    border-top: 1px solid rgba(2,43,99,.16);
 }
 
 @media (max-width: 640px) {
@@ -87,18 +90,18 @@
 .hero-stat-num {
     font-size: 2rem;
     font-weight: 800;
-    color: #fff;
+    color: var(--primary-dark);
     line-height: 1;
     margin-bottom: .2rem;
 }
 
 .hero-stat-num span {
-    color: var(--accent);
+    color: var(--primary);
 }
 
 .hero-stat-label {
     font-size: .83rem;
-    color: rgba(255,255,255,.6);
+    color: rgba(2,43,99,.70);
     font-weight: 500;
 }
 
@@ -176,16 +179,37 @@
 }
 
 /* ── WHY CHOOSE US ── */
+.why-wrap {
+    background: linear-gradient(180deg, #ffffff 0%, #f7fbff 100%);
+    border: 1px solid var(--border);
+    border-radius: calc(var(--radius) + 4px);
+    padding: 2rem 2rem 1.4rem;
+}
+.why-headline {
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    font-weight: 800;
+    line-height: 1.08;
+    letter-spacing: -0.8px;
+    margin-bottom: 0;
+}
+.why-logo {
+    width: 170px;
+    max-width: 100%;
+    opacity: .95;
+}
 .why-card {
     display: flex;
-    gap: 1.2rem;
-    align-items: flex-start;
-    padding: 1.5rem;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    gap: .75rem;
+    padding: 1.35rem 1rem;
     background: #fff;
     border: 1px solid var(--border);
-    border-radius: var(--radius);
+    border-radius: 16px;
     transition: all .3s;
     height: 100%;
+    box-shadow: 0 4px 18px rgba(2,43,99,.06);
 }
 
 .why-card:hover {
@@ -193,35 +217,59 @@
     border-color: var(--primary-light);
     transform: translateY(-4px);
 }
+.why-card::after {
+    content: '';
+    width: 34px;
+    height: 4px;
+    border-radius: 4px;
+    background: rgba(6,130,181,.35);
+    margin-top: .25rem;
+}
+.why-icon {
+    width: 62px;
+    height: 62px;
+    border-radius: 50%;
+    background: #eff6fb;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #dbe9f4;
+    color: var(--primary-dark);
+    font-size: 1.5rem;
+}
 
 .why-card h5 {
-    font-size: 1rem;
+    font-size: 1.03rem;
     font-weight: 700;
-    margin-bottom: .4rem;
+    margin-bottom: .25rem;
 }
 
 .why-card p {
-    font-size: .9rem;
+    font-size: .93rem;
     color: var(--text-mid);
     margin: 0;
     line-height: 1.6;
+}
+@media (max-width: 767px) {
+    .why-wrap { padding: 1.4rem 1.1rem 1rem; }
 }
 
 /* ── HOW IT WORKS ── */
 .step-card {
     position: relative;
-    background: #fff;
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    padding: 2rem 1.8rem 1.8rem;
+    background: linear-gradient(180deg, #ffffff 0%, #f7fbff 100%);
+    border: 1px solid #d9e8f4;
+    border-radius: 18px;
+    padding: 2.1rem 1.5rem 1.4rem;
     transition: all .3s;
     height: 100%;
+    box-shadow: 0 8px 28px rgba(2,43,99,.08);
 }
 
 .step-card:hover {
     transform: translateY(-6px);
     box-shadow: var(--shadow-hover);
-    border-color: var(--primary-light);
+    border-color: rgba(6,130,181,.5);
 }
 
 .step-card h5 {
@@ -239,18 +287,73 @@
 
 .step-number {
     position: absolute;
-    top: -18px;
-    left: 1.6rem;
-    width: 36px;
-    height: 36px;
-    background: var(--primary);
+    top: -14px;
+    left: 1.2rem;
+    width: 34px;
+    height: 34px;
+    background: linear-gradient(135deg, #0682B5, #022B63);
     color: #fff;
-    border-radius: 50%;
+    border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
     font-weight: 800;
-    font-size: .95rem;
+    font-size: .9rem;
+    box-shadow: 0 8px 18px rgba(2,43,99,.22);
+}
+
+.step-card .icon-box {
+    width: 54px;
+    height: 54px;
+    border-radius: 14px;
+    margin-bottom: .9rem;
+    background: linear-gradient(135deg, #0682B5, #022B63);
+}
+
+.contact-visual {
+    position: relative;
+    border-radius: 22px;
+    padding: 10px;
+    background: linear-gradient(135deg, rgba(6,130,181,.18), rgba(2,43,99,.18));
+    box-shadow: 0 18px 42px rgba(2,43,99,.16);
+}
+
+.contact-visual::after {
+    content: '';
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 84px;
+    height: 84px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255,255,255,.28) 0%, rgba(255,255,255,0) 72%);
+    pointer-events: none;
+}
+
+.contact-visual img {
+    width: 100%;
+    border-radius: 16px;
+    min-height: 320px;
+    max-height: 420px;
+    object-fit: cover;
+}
+
+.contact-visual-badge {
+    position: absolute;
+    left: 18px;
+    bottom: 18px;
+    background: rgba(2,43,99,.85);
+    color: #fff;
+    border: 1px solid rgba(255,255,255,.18);
+    border-radius: 12px;
+    padding: .55rem .8rem;
+    font-size: .86rem;
+    font-weight: 700;
+    backdrop-filter: blur(4px);
+}
+
+@media (max-width: 767px) {
+    .contact-visual img { min-height: 240px; max-height: 300px; }
 }
 
 /* ── CONTACT FORM SECTION ── */
@@ -267,7 +370,7 @@
     right: -80px;
     width: 300px;
     height: 300px;
-    background: radial-gradient(circle, rgba(20,136,198,.08) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(6,130,181,.10) 0%, transparent 70%);
     border-radius: 50%;
 }
 
@@ -311,7 +414,7 @@
     height: 100%;
 }
 .testimonial-stars {
-    color: #f4a923;
+    color: var(--primary);
     letter-spacing: 2px;
     margin-bottom: .75rem;
 }
@@ -478,69 +581,38 @@
 ══════════════════════════════════════ --}}
 <section class="section-pad">
     <div class="container">
-        <div class="row justify-content-center mb-5">
-            <div class="col-lg-7 text-center">
-                <span class="section-label">Why Choose Us</span>
-                <h2 class="section-title">Not a Generic <span>Hiring Platform</span></h2>
-                <div class="section-divider center"></div>
-                <p class="section-subtitle mx-auto">
-                    We specialise in connecting fintech, forex, and crypto businesses with professionals
-                    who truly understand the industry — not just any candidate.
-                </p>
-            </div>
-        </div>
-        <div class="row g-4">
-            <div class="col-md-6 col-lg-3">
-                <div class="why-card">
-                    <div class="icon-box flex-shrink-0">
-                        <i class="bi bi-graph-up-arrow"></i>
-                    </div>
-                    <div>
-                        <h5>Industry-Focused Talent</h5>
-                        <p>
-                            Candidates with real experience in trading, blockchain, and financial technology.
-                        </p>
-                    </div>
+        <div class="why-wrap">
+            <div class="row align-items-center mb-4 gy-3">
+                <div class="col-lg-8">
+                    <span class="section-label mb-2" style="color:var(--primary-dark);">Why Choose Us</span>
+                    <h2 class="why-headline">Why <span style="color:var(--primary);">Globex</span><br>Talent Solutions</h2>
                 </div>
+                <div class="col-lg-4 text-lg-end d-none d-lg-block"></div>
             </div>
-            <div class="col-md-6 col-lg-3">
-                <div class="why-card">
-                    <div class="icon-box accent flex-shrink-0">
-                        <i class="bi bi-globe2"></i>
+
+            @php
+                $whyItems = [
+                    ['icon' => 'bi-people', 'title' => 'Strong Global Talent Network', 'desc' => 'Access a vast network of pre-vetted professionals across global markets.'],
+                    ['icon' => 'bi-person-badge', 'title' => 'Deep Industry Specialization', 'desc' => 'Focused expertise in forex, fintech, crypto, and financial services sectors.'],
+                    ['icon' => 'bi-stopwatch', 'title' => 'Fast & Efficient Hiring Process', 'desc' => 'Streamlined recruitment process to deliver the right talent quickly.'],
+                    ['icon' => 'bi-clipboard2-check', 'title' => 'High-Quality Candidate Screening', 'desc' => 'Rigorous screening and assessment to ensure strong quality and fit.'],
+                    ['icon' => 'bi-database-check', 'title' => 'Forex Candidate Database', 'desc' => 'Proprietary talent database of professionals across roles and levels.'],
+                    ['icon' => 'bi-handshake', 'title' => 'Client-Focused Solutions', 'desc' => 'Tailored hiring solutions designed around your business goals.'],
+                ];
+            @endphp
+
+            <div class="row g-3 g-lg-4">
+                @foreach($whyItems as $item)
+                    <div class="col-12 col-sm-6 col-lg-4">
+                        <div class="why-card">
+                            <div class="why-icon">
+                                <i class="bi {{ $item['icon'] }}"></i>
+                            </div>
+                            <h5>{{ $item['title'] }}</h5>
+                            <p>{{ $item['desc'] }}</p>
+                        </div>
                     </div>
-                    <div>
-                        <h5>Global Talent Access</h5>
-                        <p>
-                            Hire skilled professionals from across international markets without limitations.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-3">
-                <div class="why-card">
-                    <div class="icon-box gold flex-shrink-0">
-                        <i class="bi bi-lightning-charge"></i>
-                    </div>
-                    <div>
-                        <h5>Faster Hiring Process</h5>
-                        <p>
-                            Get matched with relevant candidates quickly in fast-moving industries.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-3">
-                <div class="why-card">
-                    <div class="icon-box flex-shrink-0" style="background:linear-gradient(135deg,#7c3aed,#5b21b6);">
-                        <i class="bi bi-shield-check"></i>
-                    </div>
-                    <div>
-                        <h5>Pre-Screened Professionals</h5>
-                        <p>
-                            We focus on quality, connecting you with candidates who meet your requirements.
-                        </p>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </div>
@@ -608,7 +680,12 @@
                 </a>
             </div>
             <div class="col-lg-6 offset-lg-1">
-                <img src="{{ asset('images/talent.jpg') }}" alt="Talent Hiring" class="img-fluid rounded" style="border-radius:var(--radius);box-shadow:var(--shadow-card);">
+                <div class="contact-visual">
+                    <img src="{{ asset('images/talent.jpg') }}" alt="Talent Hiring" class="img-fluid">
+                    <div class="contact-visual-badge">
+                        <i class="bi bi-stars me-1"></i> Trusted hiring partner
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -677,7 +754,7 @@
                         @csrf
                         <div class="row g-3">
                             <div class="col-sm-6">
-                                <label class="form-label-custom">First Name <span style="color:#e53e3e;">*</span></label>
+                                <label class="form-label-custom">First Name <span style="color:var(--primary);">*</span></label>
                                 <input type="text" name="first_name" required
                                        class="form-control form-control-custom @error('first_name') is-invalid @enderror"
                                        value="{{ old('first_name') }}"
@@ -687,7 +764,7 @@
                                 @enderror
                             </div>
                             <div class="col-sm-6">
-                                <label class="form-label-custom">Last Name <span style="color:#e53e3e;">*</span></label>
+                                <label class="form-label-custom">Last Name <span style="color:var(--primary);">*</span></label>
                                 <input type="text" name="last_name" required
                                        class="form-control form-control-custom @error('last_name') is-invalid @enderror"
                                        value="{{ old('last_name') }}"
@@ -697,7 +774,7 @@
                                 @enderror
                             </div>
                             <div class="col-12">
-                                <label class="form-label-custom">Email Address <span style="color:#e53e3e;">*</span></label>
+                                <label class="form-label-custom">Email Address <span style="color:var(--primary);">*</span></label>
                                 <input type="email" name="email" required
                                        class="form-control form-control-custom @error('email') is-invalid @enderror"
                                        value="{{ old('email') }}"
@@ -707,7 +784,7 @@
                                 @enderror
                             </div>
                             <div class="col-12">
-                                <label class="form-label-custom">Subject <span style="color:#e53e3e;">*</span></label>
+                                <label class="form-label-custom">Subject <span style="color:var(--primary);">*</span></label>
                                 <input type="text" name="subject" required
                                        class="form-control form-control-custom @error('subject') is-invalid @enderror"
                                        value="{{ old('subject') }}"
@@ -717,7 +794,7 @@
                                 @enderror
                             </div>
                             <div class="col-12">
-                                <label class="form-label-custom">Message <span style="color:#e53e3e;">*</span></label>
+                                <label class="form-label-custom">Message <span style="color:var(--primary);">*</span></label>
                                 <textarea name="message" rows="4" required
                                           class="form-control form-control-custom @error('message') is-invalid @enderror"
                                           placeholder="Tell us about the role and profile you're looking to hire...">{{ old('message') }}</textarea>
@@ -803,7 +880,7 @@
                         I’m grateful for the professionalism and care brought to the process, and I would absolutely recommend working with GlobeX Talent Solutions to anyone navigating a strategic career move.
                     </p>
                     <div class="testimonial-person">
-                        <div class="testimonial-avatar" style="background:linear-gradient(135deg,#00c9a7,#00a589);">FS</div>
+                        <div class="testimonial-avatar" style="background:linear-gradient(135deg,#0682B5,#022B63);">FS</div>
                         <div>
                             <p class="testimonial-name">Full Stack Developer</p>
                             <p class="testimonial-role">Russia</p>
@@ -823,7 +900,7 @@
                         I’m deeply grateful for the guidance provided by the entire Globex Team. I couldn’t have wished for a better experience.
                     </p>
                     <div class="testimonial-person">
-                        <div class="testimonial-avatar" style="background:linear-gradient(135deg,#7c3aed,#5b21b6);">BD</div>
+                        <div class="testimonial-avatar" style="background:linear-gradient(135deg,#0682B5,#022B63);">BD</div>
                         <div>
                             <p class="testimonial-name">Business Development Manager Forex</p>
                             <p class="testimonial-role">Malaysia</p>
@@ -841,7 +918,7 @@
                         The hiring process was efficient and transparent. I received timely updates and was guided through each step clearly.
                     </p>
                     <div class="testimonial-person">
-                        <div class="testimonial-avatar" style="background:linear-gradient(135deg,#f4a923,#e0920f);">RC</div>
+                        <div class="testimonial-avatar" style="background:linear-gradient(135deg,#0682B5,#022B63);">RC</div>
                         <div>
                             <p class="testimonial-name">Risk &amp; Compliance Specialist</p>
                             <p class="testimonial-role">Cyprus</p>
