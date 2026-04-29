@@ -6,7 +6,7 @@ use App\Models\JobApplication;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
-use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Mail;
 use App\Models\JobPost;
 class OpportunitiesController extends Controller
 {
@@ -29,7 +29,7 @@ class OpportunitiesController extends Controller
             'last_name' => ['required', 'string', 'max:80'],
             'email' => ['required', 'email', 'max:255'],
             'phone' => ['nullable', 'string', 'max:40'],
-            'position' => ['required', 'string', 'max:100'],
+            'position' => ['required'],
             'experience' => ['required', 'string', 'max:50'],
             'cv' => ['required', 'file', 'mimes:pdf,doc,docx', 'max:5120'],
             'cover_letter' => ['required', 'file', 'mimes:pdf,doc,docx', 'max:5120'],
@@ -37,6 +37,17 @@ class OpportunitiesController extends Controller
         ]);
 
         try {
+            $jobPost = null;
+            $positionValue = (string) $data['position'];
+            if ($positionValue !== 'other') {
+                $jobPost = JobPost::query()
+                    ->where('is_active', true)
+                    ->findOrFail((int) $positionValue);
+                $positionValue = $jobPost->title;
+            } else {
+                $positionValue = 'Other';
+            }
+
             // Store CV file
             $cvPath = $request->file('cv')->store('applications/cvs', 'local');
             
@@ -49,7 +60,8 @@ class OpportunitiesController extends Controller
                 'last_name' => $data['last_name'],
                 'email' => $data['email'],
                 'phone' => $data['phone'],
-                'position' => $data['position'],
+                'position' => $positionValue,
+                'job_post_id' => $jobPost?->id,
                 'experience' => $data['experience'],
                 'cv_path' => $cvPath,
                 'cover_letter_path' => $coverLetterPath,
@@ -57,9 +69,19 @@ class OpportunitiesController extends Controller
                 'status' => 'pending',
             ]);
 
+            $adminEmail = (string) env('ADMIN_NOTIFICATION_EMAIL', config('mail.from.address'));
+            if ($adminEmail) {
+                Mail::raw(
+                    "New job application submitted by {$data['first_name']} {$data['last_name']} ({$data['email']}) for {$positionValue}.",
+                    fn ($message) => $message
+                        ->to($adminEmail)
+                        ->subject('New Job Application Received')
+                );
+            }
+
             Log::info('Job application submitted', [
                 'email' => $data['email'],
-                'position' => $data['position'],
+                'position' => $positionValue,
                 'timestamp' => now(),
             ]);
 

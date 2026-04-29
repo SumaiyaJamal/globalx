@@ -57,6 +57,12 @@
         font-weight: 700;
     }
     .pagination .page-link { border-radius: 10px; }
+    .jobs-filter-card {
+        background: #fff;
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        box-shadow: var(--shadow-card);
+    }
 </style>
 @endpush
 
@@ -75,6 +81,27 @@
 
     <section class="section-pad-sm bg-soft" style="padding-top:0;">
         <div class="container">
+            <div class="jobs-filter-card p-3 p-md-4 mb-4">
+                <form method="GET" action="{{ route('jobs.portal') }}" class="row g-2 g-md-3 align-items-end">
+                    <div class="col-lg-6">
+                        <label class="form-label-custom">Search jobs</label>
+                        <input type="text" name="search" value="{{ $search ?? '' }}" class="form-control form-control-custom" placeholder="Search by title, location, or skill">
+                    </div>
+                    <div class="col-lg-4">
+                        <label class="form-label-custom">Category</label>
+                        <select name="category" class="form-control form-control-custom">
+                            <option value="">All categories</option>
+                            @foreach($categories as $cat)
+                                <option value="{{ $cat }}" @selected(($category ?? '') === $cat)>{{ $cat }}</option>
+                            @endforeach
+                        </select>
+                    </div>
+                    <div class="col-lg-2 d-grid">
+                        <button type="submit" class="btn btn-primary-custom justify-content-center">Filter</button>
+                    </div>
+                </form>
+            </div>
+
             @if($jobs->count() === 0)
                 <div class="card-custom text-center">
                     <div class="icon-box accent mx-auto" style="margin-bottom:1rem;">
@@ -124,6 +151,9 @@
                                 @auth
                                 @else
                                 <div class="d-flex gap-2">
+                                        <a class="btn btn-outline-custom flex-grow-1 text-center" href="{{ route('jobs.show', ['slug' => ($job->slug ?: (\Illuminate\Support\Str::slug($job->title) . '-' . $job->id))]) }}">
+                                            Details
+                                        </a>
                                         <a class="btn btn-primary-custom flex-grow-1 justify-content-center" href="{{ url('/opportunities') }}">
                                             Apply <i class="bi bi-arrow-right"></i>
                                         </a>

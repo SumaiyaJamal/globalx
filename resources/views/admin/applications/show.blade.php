@@ -50,19 +50,26 @@
                 </div>
             </div>
         </div>
-        <!-- <div class="col-lg-5">
-            <div class="admin-card p-3 h-100">
+        <div class="col-lg-12">
+            <div class="admin-card p-3">
                 <div class="fw-bold mb-2" style="font-family:'Sora',sans-serif;">Status</div>
-                <div>
-                    <span class="badge rounded-pill text-bg-{{ $application->status === 'pending' ? 'warning' : ($application->status === 'accepted' ? 'success' : ($application->status === 'rejected' ? 'danger' : 'secondary')) }}">
-                        {{ ucfirst($application->status) }}
-                    </span>
-                </div>
-                <div class="mt-3 small" style="color:var(--text-light);font-weight:700;">
-                    (Status update UI can be added next.)
-                </div>
+                <form method="POST" action="{{ route('admin.applications.update_status', $application) }}" class="row g-2 align-items-end">
+                    @csrf
+                    @method('PATCH')
+                    <div class="col-md-4">
+                        <label class="form-label small fw-bold">Update status</label>
+                        <select name="status" class="form-select">
+                            @foreach(['pending', 'reviewed', 'accepted', 'rejected'] as $status)
+                                <option value="{{ $status }}" @selected($application->status === $status)>{{ ucfirst($status) }}</option>
+                            @endforeach
+                        </select>
+                    </div>
+                    <div class="col-md-3">
+                        <button class="btn btn-admin" type="submit">Save & Notify Candidate</button>
+                    </div>
+                </form>
             </div>
-        </div> -->
+        </div>
         <div class="col-12">
             <div class="admin-card p-3">
                 <div class="fw-bold mb-2" style="font-family:'Sora',sans-serif;">Notes</div>

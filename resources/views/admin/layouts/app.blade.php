@@ -13,9 +13,9 @@
 
     <style>
         :root {
-            --primary:       #0a5c8a;
-            --primary-dark:  #073f61;
-            --primary-light: #1488c6;
+            --primary:       #0682B5;
+            --primary-dark:  #022B63;
+            --primary-light: #0682B5;
             --accent:        #00c9a7;
             --text-dark:     #0d1b2a;
             --text-mid:      #3d5166;
@@ -23,7 +23,7 @@
             --bg-soft:       #f4f8fc;
             --bg-white:      #ffffff;
             --border:        #dde8f0;
-            --shadow-card:   0 4px 24px rgba(10,92,138,.10);
+            --shadow-card:   0 4px 24px rgba(2,43,99,.10);
             --radius:        14px;
             --radius-sm:     10px;
         }
@@ -88,8 +88,8 @@
             font-size: .93rem;
             transition: background .2s, color .2s;
         }
-        .admin-nav a:hover { background: rgba(10,92,138,.06); color: var(--primary-dark); }
-        .admin-nav a.active { background: rgba(10,92,138,.10); color: var(--primary-dark); }
+        .admin-nav a:hover { background: rgba(6,130,181,.08); color: var(--primary-dark); }
+        .admin-nav a.active { background: rgba(6,130,181,.14); color: var(--primary-dark); }
 
         .admin-content { flex:1; min-width: 0; }
 
@@ -133,7 +133,7 @@
             font-weight: 800;
             color: var(--text-mid);
         }
-        .btn-admin-outline:hover { color: var(--primary-dark); border-color: rgba(10,92,138,.25); }
+        .btn-admin-outline:hover { color: var(--primary-dark); border-color: rgba(6,130,181,.25); }
 
         @media (max-width: 991.98px) {
             .admin-shell { display:block; }
@@ -252,7 +252,7 @@
             icon: 'success',
             title: 'Success',
             text: @json(session('success')),
-            confirmButtonColor: '#0a5c8a'
+            confirmButtonColor: '#0682B5'
         });
     @endif
 
@@ -261,7 +261,7 @@
             icon: 'error',
             title: 'Something went wrong',
             text: @json(session('error')),
-            confirmButtonColor: '#0a5c8a'
+            confirmButtonColor: '#0682B5'
         });
     @endif
 
@@ -270,7 +270,7 @@
             icon: 'error',
             title: 'Please fix form errors',
             html: `{!! collect($errors->all())->map(fn($e) => '<div style="text-align:left;">- '.e($e).'</div>')->implode('') !!}`,
-            confirmButtonColor: '#0a5c8a'
+            confirmButtonColor: '#0682B5'
         });
     @endif
 </script>

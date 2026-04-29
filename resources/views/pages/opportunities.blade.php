@@ -329,7 +329,7 @@
                                 name="position" required>
                                 <option value="">-- Select a Position --</option>
                                 @foreach($jobs as $job)
-                                    <option value="{{ $job->id }}" @selected(old('position') === $job->id)>{{ $job->title }}</option>
+                                    <option value="{{ $job->id }}" @selected(old('position') === (string) $job->id)>{{ $job->title }}</option>
                                 @endforeach
                                 <option value="other" @selected(old('position') === 'other')>Other</option>
                             </select>

@@ -15,6 +15,7 @@ class JobApplication extends Model
         'email',
         'phone',
         'position',
+        'job_post_id',
         'experience',
         'cv_path',
         'cover_letter_path',

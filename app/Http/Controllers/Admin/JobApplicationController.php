@@ -4,7 +4,9 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\JobApplication;
-use Symfony\Component\HttpFoundation\Response;
+use Illuminate\Http\RedirectResponse;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 use Illuminate\View\View;
@@ -26,6 +28,27 @@ class JobApplicationController extends Controller
     public function show(JobApplication $jobApplication): View
     {
         return view('admin.applications.show', ['application' => $jobApplication]);
+    }
+
+    public function updateStatus(Request $request, JobApplication $jobApplication): RedirectResponse
+    {
+        $data = $request->validate([
+            'status' => ['required', 'in:pending,reviewed,accepted,rejected'],
+        ]);
+
+        $oldStatus = $jobApplication->status;
+        $jobApplication->update(['status' => $data['status']]);
+
+        if ($oldStatus !== $data['status']) {
+            Mail::raw(
+                "Hello {$jobApplication->full_name}, your application status is now: " . ucfirst($data['status']) . '.',
+                fn ($message) => $message
+                    ->to($jobApplication->email)
+                    ->subject('Application Status Update')
+            );
+        }
+
+        return back()->with('success', 'Application status updated.');
     }
 
     public function downloadCv(JobApplication $jobApplication): StreamedResponse

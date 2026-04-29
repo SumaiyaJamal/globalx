@@ -33,6 +33,7 @@ Route::get('/hire-talent', function () {
 Route::post('/hire-talent/send', [ContactController::class, 'send'])->name('hire-talent.send');
 
 Route::get('/jobs', [JobPortalController::class, 'index'])->name('jobs.portal');
+Route::get('/jobs/{slug}', [JobPortalController::class, 'show'])->name('jobs.show');
 
 Route::get('/opportunities', [OpportunitiesController::class, 'index'])->name('opportunities');
 Route::post('/opportunities/submit', [OpportunitiesController::class, 'submit'])->name('opportunities.submit');
@@ -54,6 +55,7 @@ Route::prefix('admin')->name('admin.')->group(function () {
 
         Route::get('applications', [AdminJobApplicationController::class, 'index'])->name('applications.index');
         Route::get('applications/{jobApplication}', [AdminJobApplicationController::class, 'show'])->name('applications.show');
+        Route::patch('applications/{jobApplication}/status', [AdminJobApplicationController::class, 'updateStatus'])->name('applications.update_status');
         Route::get('applications/{jobApplication}/download/cv', [AdminJobApplicationController::class, 'downloadCv'])->name('applications.download.cv');
         Route::get('applications/{jobApplication}/download/cover-letter', [AdminJobApplicationController::class, 'downloadCoverLetter'])->name('applications.download.cover_letter');
 

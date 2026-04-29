@@ -17,9 +17,9 @@
 
     <style>
         :root {
-            --primary:       #0a5c8a;
-            --primary-dark:  #073f61;
-            --primary-light: #1488c6;
+            --primary:       #0682B5;
+            --primary-dark:  #022B63;
+            --primary-light: #0682B5;
             --accent:        #00c9a7;
             --accent-2:      #f4a923;
             --text-dark:     #0d1b2a;
@@ -28,9 +28,9 @@
             --bg-soft:       #f4f8fc;
             --bg-white:      #ffffff;
             --border:        #dde8f0;
-            --gradient-hero: linear-gradient(105deg, rgba(7,63,97,.92) 0%, rgba(10,92,138,.80) 55%, rgb(20, 136, 198) 100%);
-            --shadow-card:   0 4px 24px rgba(10,92,138,.10);
-            --shadow-hover:  0 12px 40px rgba(10,92,138,.18);
+            --gradient-hero: linear-gradient(105deg, rgba(2,43,99,.92) 0%, rgba(6,130,181,.84) 55%, rgba(6,130,181,1) 100%);
+            --shadow-card:   0 4px 24px rgba(2,43,99,.10);
+            --shadow-hover:  0 12px 40px rgba(2,43,99,.18);
             --radius:        14px;
             --radius-sm:     8px;
         }
@@ -42,6 +42,7 @@
             color: var(--text-dark);
             background: var(--bg-white);
             overflow-x: hidden;
+            font-size: 1.05rem;
         }
 
         h1,h2,h3,h4,h5,h6 {
@@ -60,7 +61,7 @@
             z-index: 1050;
             transition: box-shadow .3s;
         }
-        .navbar.scrolled { box-shadow: 0 2px 20px rgba(10,92,138,.12); }
+        .navbar.scrolled { box-shadow: 0 2px 20px rgba(2,43,99,.12); }
 
         .navbar-brand {
             font-family: 'Sora', sans-serif;
@@ -74,13 +75,21 @@
         }
         .navbar-brand span { color: var(--accent); }
         .navbar-brand img {
-            height: 68px;
+            height: 84px;
             width: auto;
             object-fit: contain;
             display: block;
         }
+        .brand-company-name {
+            font-size: 1rem;
+            font-weight: 800;
+            color: var(--primary-dark);
+            line-height: 1.2;
+            max-width: 220px;
+        }
         @media (max-width: 576px) {
-            .navbar-brand img { height: 50px; }
+            .navbar-brand img { height: 62px; }
+            .brand-company-name { font-size: .88rem; max-width: 170px; }
         }
 
         .nav-link {
@@ -98,7 +107,7 @@
         }
 
         .btn-nav-cta {
-            background: #0a5c8a !important;
+            background: #0682B5 !important;
             color: #fff !important;
             border-radius: 50px;
             padding: 0.45rem 1.4rem !important;
@@ -135,7 +144,7 @@
             background: var(--primary-dark);
             color: #fff;
             transform: translateY(-2px);
-            box-shadow: 0 8px 28px rgba(10,92,138,.3);
+            box-shadow: 0 8px 28px rgba(2,43,99,.3);
             text-decoration: none;
         }
         .btn-outline-custom {
@@ -347,6 +356,7 @@
     <div class="container">
         <a class="navbar-brand" href="{{ url('/') }}">
             <img src="{{ asset('images/web_logo.png') }}" alt="Website Logo">
+            <span class="brand-company-name">Globex Talent Solutions</span>
         </a>
         <button class="navbar-toggler border-0" type="button"
                 data-bs-toggle="collapse" data-bs-target="#navMenu"
@@ -465,7 +475,7 @@
             icon: 'success',
             title: 'Success',
             text: @json(session('success')),
-            confirmButtonColor: '#0a5c8a'
+            confirmButtonColor: '#0682B5'
         });
     @endif
 
@@ -474,7 +484,7 @@
             icon: 'error',
             title: 'Something went wrong',
             text: @json(session('error')),
-            confirmButtonColor: '#0a5c8a'
+            confirmButtonColor: '#0682B5'
         });
     @endif
 
@@ -483,7 +493,7 @@
             icon: 'error',
             title: 'Please fix form errors',
             html: `{!! collect($errors->all())->map(fn($e) => '<div style="text-align:left;">- '.e($e).'</div>')->implode('') !!}`,
-            confirmButtonColor: '#0a5c8a'
+            confirmButtonColor: '#0682B5'
         });
     @endif
 </script>

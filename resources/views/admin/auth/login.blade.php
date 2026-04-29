@@ -11,9 +11,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary:       #0a5c8a;
-            --primary-dark:  #073f61;
-            --primary-light: #1488c6;
+            --primary:       #0682B5;
+            --primary-dark:  #022B63;
+            --primary-light: #0682B5;
             --accent:        #00c9a7;
             --text-dark:     #0d1b2a;
             --text-mid:      #3d5166;
@@ -21,8 +21,8 @@
             --bg-soft:       #f4f8fc;
             --bg-white:      #ffffff;
             --border:        #dde8f0;
-            --gradient-hero: linear-gradient(105deg, rgba(7,63,97,.92) 0%, rgba(10,92,138,.80) 55%, rgb(20, 136, 198) 100%);
-            --shadow-card:   0 12px 40px rgba(10,92,138,.18);
+            --gradient-hero: linear-gradient(105deg, rgba(2,43,99,.92) 0%, rgba(6,130,181,.84) 55%, rgba(6,130,181,1) 100%);
+            --shadow-card:   0 12px 40px rgba(2,43,99,.18);
             --radius:        14px;
             --radius-sm:     8px;
         }
