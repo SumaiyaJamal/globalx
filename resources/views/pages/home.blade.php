@@ -155,9 +155,8 @@
     height: 92px;
 }
 .companies-carousel .company-logo img {
-    max-height: 56px;
-    max-width: 160px;
-    width: auto;
+    height: 90px;
+    width: 140px;
     object-fit: contain;
     filter: grayscale(100%);
     opacity: .75;
@@ -264,6 +263,10 @@
     transition: all .3s;
     height: 100%;
     box-shadow: 0 8px 28px rgba(2,43,99,.08);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 .step-card:hover {
@@ -288,7 +291,8 @@
 .step-number {
     position: absolute;
     top: -14px;
-    left: 1.2rem;
+    left: 50%;
+    transform: translateX(-50%);
     width: 34px;
     height: 34px;
     background: linear-gradient(135deg, #0682B5, #022B63);
@@ -597,7 +601,7 @@
                     ['icon' => 'bi-stopwatch', 'title' => 'Fast & Efficient Hiring Process', 'desc' => 'Streamlined recruitment process to deliver the right talent quickly.'],
                     ['icon' => 'bi-clipboard2-check', 'title' => 'High-Quality Candidate Screening', 'desc' => 'Rigorous screening and assessment to ensure strong quality and fit.'],
                     ['icon' => 'bi-database-check', 'title' => 'Forex Candidate Database', 'desc' => 'Proprietary talent database of professionals across roles and levels.'],
-                    ['icon' => 'bi-handshake', 'title' => 'Client-Focused Solutions', 'desc' => 'Tailored hiring solutions designed around your business goals.'],
+                    ['icon' => 'bi-lightbulb', 'title' => 'Client-Focused Solutions', 'desc' => 'Tailored hiring solutions designed around your business goals.'],
                 ];
             @endphp
 
@@ -732,13 +736,13 @@
                         <div class="icon-box" style="width:44px;height:44px;font-size:1.1rem;border-radius:10px;flex-shrink:0;">
                             <i class="bi bi-envelope"></i>
                         </div>
-                        <span style="color:var(--text-mid);font-size:.95rem;">info@forextalent.com</span>
+                        <span style="color:var(--text-mid);font-size:.95rem;">Hr@globextalentsolutions.com</span>
                     </li>
                     <li class="d-flex align-items-center gap-3">
                         <div class="icon-box accent" style="width:44px;height:44px;font-size:1.1rem;border-radius:10px;flex-shrink:0;">
                             <i class="bi bi-whatsapp"></i>
                         </div>
-                        <span style="color:var(--text-mid);font-size:.95rem;">+92 300 1234567 (WhatsApp)</span>
+                        <span style="color:var(--text-mid);font-size:.95rem;">+44 7546 718850 (WhatsApp)</span>
                     </li>
                 </ul>
             </div>

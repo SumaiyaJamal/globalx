@@ -25,7 +25,7 @@ class ContactController extends Controller
         $to = config('mail.contact_to.address')
             ?? env('CONTACT_TO_EMAIL')
             ?? config('mail.from.address')
-            ?? 'info@forextalent.com';
+            ?? 'Hr@globextalentsolutions.com';
 
         try {
             Offer::create($data);
@@ -42,7 +42,6 @@ class ContactController extends Controller
                 ],
             ]);
         }
-
         return back()->with('success', 'Thanks! Your message has been sent. We’ll get back to you shortly.');
     }
 }

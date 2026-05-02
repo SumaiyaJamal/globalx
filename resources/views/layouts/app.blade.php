@@ -77,6 +77,7 @@
         .navbar-brand img {
             height: 72px;
             width: auto;
+            max-width: 200px;
             object-fit: contain;
             display: block;
         }
@@ -89,7 +90,7 @@
             white-space: normal;
         }
         @media (max-width: 576px) {
-            .navbar-brand img { height: 62px; }
+            .navbar-brand img { height: 62px; max-width: 150px; }
             .brand-company-name { font-size: .98rem; max-width: 200px; line-height: 1.1; }
         }
 
@@ -285,6 +286,7 @@
         .footer-brand img {
             height: 95px;
             width: auto;
+            max-width: 250px;
             object-fit: contain;
             display: block;
         }
@@ -439,11 +441,11 @@
             </div>
             <div class="col-lg-3 col-md-6">
                 <h5>Get in Touch</h5>
-                <a href="mailto:info@forextalent.com">
-                    <i class="bi bi-envelope me-2"></i>info@forextalent.com
+                <a href="mailto:Hr@globextalentsolutions.com">
+                    <i class="bi bi-envelope me-2"></i>Hr@globextalentsolutions.com
                 </a>
-                <a href="https://wa.me/923001234567">
-                    <i class="bi bi-whatsapp me-2"></i>+92 300 1234567
+                <a href="https://wa.me/447546718850">
+                    <i class="bi bi-whatsapp me-2"></i>+44 7546 718850
                 </a>
                 <a href="#">
                     <i class="bi bi-geo-alt me-2"></i>103, Fahidi Heights, Khalid Bin Al Waleed Road, Al Hamriya, Bur Dubai, Dubai
@@ -466,6 +468,7 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script>
+    
     // Sticky navbar shadow on scroll
     window.addEventListener('scroll', () => {
         document.getElementById('mainNav').classList.toggle('scrolled', window.scrollY > 40);

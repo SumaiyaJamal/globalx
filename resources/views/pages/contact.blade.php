@@ -250,8 +250,8 @@
                     </div>
                     <div>
                         <h6>Email Us</h6>
-                        <a href="mailto:info@forextalent.com">
-                            info@forextalent.com
+                        <a href="mailto:Hr@globextalentsolutions.com">
+                            Hr@globextalentsolutions.com
                         </a>
                         <p>We reply within 24 hours</p>
                     </div>
@@ -264,8 +264,8 @@
                     </div>
                     <div>
                         <h6>WhatsApp / Phone</h6>
-                        <a href="https://wa.me/923001234567" target="_blank">
-                            +92 300 1234567
+                        <a href="https://wa.me/447546718850" target="_blank">
+                            +44 7546 718850
                         </a>
                         <p>Mon–Fri, 9am – 6pm PKT</p>
                     </div>
@@ -332,10 +332,10 @@
                 <div class="quick-connect-box">
                     <p class="quick-connect-label">Quick Connect</p>
                     <div class="quick-connect-links">
-                        <a href="https://wa.me/923001234567" target="_blank" class="quick-connect-btn whatsapp-btn">
+                        <a href="https://wa.me/447546718850" target="_blank" class="quick-connect-btn whatsapp-btn">
                             <i class="bi bi-whatsapp"></i> WhatsApp
                         </a>
-                        <a href="mailto:info@forextalent.com" class="quick-connect-btn email-btn">
+                        <a href="mailto:Hr@globextalentsolutions.com" class="quick-connect-btn email-btn">
                             <i class="bi bi-envelope"></i> Email
                         </a>
                         <a href="https://linkedin.com" target="_blank" class="quick-connect-btn linkedin-btn">
