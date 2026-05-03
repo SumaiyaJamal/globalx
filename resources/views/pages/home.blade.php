@@ -482,10 +482,10 @@
                     who understand fast-moving financial markets and emerging technologies.
                 </p>
                 <div class="d-flex flex-wrap gap-3 justify-content-center">
-                    <a href="{{ route('hire-talent') }}" class="btn-white-custom">
+                    <a href="{{ route('hire-talent') }}" class="hero-btn-primary">
                         Start Hiring <i class="bi bi-arrow-right ms-2"></i>
                     </a>
-                    <a href="{{ url('/about') }}" class="btn-outline-custom" style="color:#fff;border-color:rgba(255,255,255,.5);text-decoration:none;">
+                    <a href="{{ url('/about') }}" class="hero-btn-outline" style="text-decoration:none;">
                         Learn More
                     </a>
                 </div>

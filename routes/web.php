@@ -51,7 +51,7 @@ Route::prefix('admin')->name('admin.')->group(function () {
     Route::middleware(['auth', 'role:admin'])->group(function () {
         Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
 
-        Route::resource('jobs', AdminJobPostController::class)->except(['show']);
+        Route::resource('jobs', AdminJobPostController::class)->except(['show'])->parameters(['jobs' => 'job:id']);
 
         Route::get('applications', [AdminJobApplicationController::class, 'index'])->name('applications.index');
         Route::get('applications/{jobApplication}', [AdminJobApplicationController::class, 'show'])->name('applications.show');
