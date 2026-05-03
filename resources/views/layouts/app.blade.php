@@ -187,6 +187,93 @@
             text-decoration: none;
         }
 
+        /* ── HERO SECTION BUTTONS ── */
+        .hero-btn-primary {
+            background: var(--primary);
+            color: #fff;
+            border: none;
+            border-radius: 50px;
+            padding: 0.75rem 2rem;
+            font-family: 'Sora', sans-serif;
+            font-weight: 700;
+            font-size: 0.95rem;
+            transition: all .25s;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .hero-btn-primary:hover {
+            background: var(--primary-dark);
+            color: #fff;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 28px rgba(6,130,181,.3);
+            text-decoration: none;
+        }
+
+        .hero-btn-outline {
+            background: transparent;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+            border-radius: 50px;
+            padding: 0.65rem 1.9rem;
+            font-family: 'Sora', sans-serif;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: all .25s;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .hero-btn-outline:hover {
+            background: var(--primary);
+            color: #fff;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 28px rgba(6,130,181,.3);
+            text-decoration: none;
+        }
+
+        /* ── CTA SECTION BUTTONS ── */
+        .cta-btn-white {
+            background: #fff;
+            color: var(--primary-dark);
+            border: none;
+            border-radius: 50px;
+            padding: 0.75rem 2rem;
+            font-family: 'Sora', sans-serif;
+            font-weight: 700;
+            font-size: 0.95rem;
+            transition: all .25s;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .cta-btn-white:hover {
+            background: var(--primary-dark);
+            color: #fff;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 28px rgba(2,43,99,.3);
+            text-decoration: none;
+        }
+
+        .cta-btn-outline {
+            background: transparent;
+            color: #fff;
+            border: 2px solid rgba(255,255,255,.5);
+            border-radius: 50px;
+            padding: 0.65rem 1.9rem;
+            font-family: 'Sora', sans-serif;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: all .25s;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .cta-btn-outline:hover {
+            background: var(--primary-dark);
+            color: #fff;
+            border-color: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 28px rgba(2,43,99,.3);
+            text-decoration: none;
+        }
+
         /* ── SECTION HELPERS ── */
         .section-pad { padding: 90px 0; }
         .section-pad-sm { padding: 60px 0; }

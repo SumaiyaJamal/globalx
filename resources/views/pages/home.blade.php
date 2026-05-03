@@ -707,10 +707,10 @@
             Get matched with pre-screened forex, crypto, and fintech professionals in days, not weeks.
         </p>
         <div class="d-flex flex-wrap justify-content-center gap-3">
-            <a href="{{ route('hire-talent') }}" class="btn-white-custom">
+            <a href="{{ route('hire-talent') }}" class="cta-btn-white">
                 Start Now <i class="bi bi-arrow-right ms-1"></i>
             </a>
-            <a href="{{ url('/about') }}" class="btn-outline-custom" style="color:#fff;border-color:rgba(255,255,255,.5);">
+            <a href="{{ url('/about') }}" class="cta-btn-outline">
                 Learn More
             </a>
         </div>
@@ -832,7 +832,7 @@
             Whether you need one specialist or an entire team, we're ready to connect you
             with the right talent — fast.
         </p>
-        <a href="{{ route('hire-talent') }}" class="btn-white-custom">
+        <a href="{{ route('hire-talent') }}" class="cta-btn-white">
             Start Hiring Today <i class="bi bi-arrow-right ms-1"></i>
         </a>
     </div>

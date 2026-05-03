@@ -358,10 +358,10 @@
             Let us help you find the right professionals to grow your fintech or trading business.
         </p>
         <div class="d-flex flex-wrap justify-content-center gap-3">
-            <a href="{{ route('hire-talent') }}" class="btn-white-custom">
+            <a href="{{ route('hire-talent') }}" class="cta-btn-white">
                 Contact Us <i class="bi bi-arrow-right ms-1"></i>
             </a>
-            <a href="{{ url('/') }}" class="btn-outline-custom" style="color:#fff;border-color:rgba(255,255,255,.5);">
+            <a href="{{ url('/') }}" class="cta-btn-outline">
                 Back to Home
             </a>
         </div>
